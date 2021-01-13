@@ -35,7 +35,7 @@ def exec_read_query(conn,query):
 
 
 
-create_users_table=("""
+create_users_table="""
 CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS users (
     gender TEXT,
     location TEXT
     );
-    """)
+    """
 
 create_posts_table=("""
 CREATE TABLE IF NOT EXISTS posts (
@@ -55,17 +55,18 @@ CREATE TABLE IF NOT EXISTS posts (
     )
     """ )
 
-create_users=("""
-INSERT INTO users (name,age,gender,location)
+create_users="""
+INSERT INTO 
+    users (name,age,gender,location)
 VALUES
-('Jamie',25,'M','US'),
-('Liss',66,'F','US'),
-('Tom',22,'M','FR'),
-('Megan',18,'F','US'),
-('Londy',54,'F','PL'),
-""" )
+    ('Jamie',25,'M','US'),
+    ('Liss',66,'F','US'),
+    ('Tom',22,'M','FR'),
+    ('Megan',18,'F','US'),
+    ('Londy',54,'F','PL');
+"""
 
-create_posts=("""
+create_posts="""
 INSERT INTO
 posts (title,content,user_id)
 VALUES
@@ -73,8 +74,8 @@ VALUES
 ("ab","lo love",2),
 ("abqqq","we lo love",2),
 ("abwww","lo awerlove",4),
-("asdab","nopelo love",3),
-""" )
+("asdab","nopelo love",3);
+"""
 
 
 if __name__ == "__main__":
